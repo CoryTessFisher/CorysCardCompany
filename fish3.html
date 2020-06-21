@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+    <style>
+    #wrapper1{
+        position: absolute;
+		z-index:5000;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper2{
+        position: absolute;
+		z-index:5002;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper3{
+        position: absolute;
+		z-index:5003;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper4{
+        position: absolute;
+		z-index:5004;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper5{
+        position: absolute;
+		z-index:5005;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper6{
+        position: absolute;
+		z-index:5006;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper7{
+        position: absolute;
+		z-index:5007;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper8{
+        position: absolute;
+		z-index:5008;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper9{
+        position: absolute;
+		z-index:5009;
+        bottom: 0px;
+        width: 95%;
+    }
+	#wrapper10{
+        position: absolute;
+		z-index:5010;
+        bottom: 0px;
+        width: 95%;
+    }
+    </style>
+
+
+</head>
+
+<body bgcolor=#666666>
+
+   </script>
+  
+<script language="javascript">
+  var num_images_onscreen = 0;
+  var keyspushed = 0;
+  var random_images_array = ["Alec.gif", "Anna.gif", "Benji.gif", "Carter.gif", "Charlotte.gif", "Elliot.gif", "Gordon.gif", "Hayden.gif", "Henry.gif", "HenryP.gif", "Isaiah.gif", "Jackson.gif", "Jenica.gif", "Kai.gif","Jaiden.gif", "Kolby.gif", "Korbin.gif", "Luc.gif", "Matthew.gif", "McKell.gif", "Nic.gif", "Nolan.gif", "Oliver.gif", "Rex.gif", "Richie.gif", "Ryan.gif", "Seth.gif", "Talan.gif", "Tess.gif", "Wesley.gif"]; 
+  
+   document.onkeydown = function(evt) 
+   {
+    	evt = evt || window.event;
+			switch(keyspushed)
+			{
+				case 0:
+					if (evt.keyCode == 38) keyspushed = 1;
+					else keyspushed = 0;
+					
+					break;
+				case 1:
+					if (evt.keyCode == 37) keyspushed = 2;
+					else keyspushed = 0;
+					break;
+				case 2:
+					if (evt.keyCode == 38) keyspushed = 3;
+					else keyspushed = 0;
+					break;
+				case 3:
+					if (evt.keyCode == 37) keyspushed = 4;
+					else keyspushed = 0;
+					break;
+				case 4:
+					total_images= 3;
+					randInt = parseInt((Math.random() * (3 + 1)), 10);
+					
+				num = Math.floor( Math.random() * random_images_array.length );
+    			image = random_images_array[ num ];
+//				alert(image);
+											
+					
+					if (evt.keyCode == 75)
+					{			
+						switch(num_images_onscreen)
+						{
+							case 0:
+								document.getElementById("myDiv1").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=20><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 1:
+								document.getElementById("myDiv2").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=14><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 2:
+								document.getElementById("myDiv3").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=6><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 3:
+								document.getElementById("myDiv4").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=8><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 4:
+								document.getElementById("myDiv5").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=18><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 5:
+								document.getElementById("myDiv6").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=12><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 6:
+								document.getElementById("myDiv7").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=4><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 7:
+								document.getElementById("myDiv8").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=16><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 8:
+								document.getElementById("myDiv9").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=10><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								break;	
+							case 9:
+								document.getElementById("myDiv10").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1 scrollamount=2><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";
+								num_images_onscreen = -1;
+								break;	
+							
+						}
+						num_images_onscreen += 1;
+						
+					} else keyspushed = 0;
+						
+					break;
+			}
+			
+	}
+	
+   </script>
+   
+   
+   <div id="wrapper1">
+   <b id="myDiv1"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper2">
+   <b id="myDiv2"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper3">
+   <b id="myDiv3"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper4">
+   <b id="myDiv4"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper5">
+   <b id="myDiv5"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper6">
+   <b id="myDiv6"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper7">
+   <b id="myDiv7"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper8">
+   <b id="myDiv8"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper9">
+   <b id="myDiv9"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+</div>
+<div id="wrapper10">
+   <b id="myDiv10"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+   </div>
+   
+   Testing
+   
+   Press Any Key:<br>
+
+<script>
+
+
+   
+   
+</body>
+</html>

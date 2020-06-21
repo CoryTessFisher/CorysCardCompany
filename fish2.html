@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+    <style>
+    #wrapper{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    #myimage{
+        display: block;
+        position: relative;
+        margin: auto;
+        width: (any width you want)
+   }
+   </style>
+
+
+</head>
+
+<body>
+
+<style style="text/css">
+.scroll-left {
+ height: 100px;	
+ overflow: hidden;
+ position: relative;
+}
+.scroll-left .inner {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-left 15s linear infinite;
+ -webkit-animation: scroll-left 15s linear infinite;
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+</style>
+
+<div class="scroll-left">
+<div class="inner">
+<img src="http://www.html.am/images/html-codes/marquees/fish-swimming.gif" alt="Swimming fish">
+</div>
+</div>
+
+
+<marquee behavior="scroll" direction="left">
+<img src="http://www.html.am/images/html-codes/marquees/fish-swimming.gif" alt="Swimming fish">
+</marquee>
+
+ <form onSubmit='alerttest(this); return false'>        
+      <input type="text">         
+</form>
+
+
+   <script language="javascript">
+        function alerttest()
+        {
+        alert("Executing jolly.exe !!!!");
+        // function edited by Inderpreet singh
+        }
+   </script>
+  
+  <script language="javascript">
+   document.onkeydown = function(evt) 
+   {
+    	evt = evt || window.event;
+    	if (evt.ctrlKey && evt.keyCode == 90)
+		{
+	        alert("Ctrl-Z");
+			document.getElementById("myDiv").innerHTML="<marquee behavior=\"scroll\" direction=\"left\" loop=1><img src=\"images/Jaiden.gif\" alt=\"Swimming fish\"></marquee>";
+//				document.write('<marquee behavior="scroll" direction="left">');
+//				document.write('<img src="images/Jaiden.gif" alt="Jaiden">');
+//				document.write('</marquee>');
+    	}
+	}
+   </script>
+   
+   
+   <div id="wrapper">
+
+   <b id="myDiv"><marquee behavior="scroll" direction="left" loop=1>
+<img src="http://www.html.am/images/html-codes/marquees/fish-swimming.gif" alt="Swimming fish">
+</marquee></b>
+   </div>
+   
+   Testing
+   
+   <script language="JavaScript" type="text/javascript">
+//Highlight image script- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+function makevisible(cur,which){
+strength=(which==0)? 1 : 0.2
+
+if (cur.style.MozOpacity)
+cur.style.MozOpacity=strength
+else if (cur.filters)
+cur.filters.alpha.opacity=strength*100
+}
+</script>
+
+<style type="text/css">
+.jsclass body .randomordercontent{
+display: none;
+}
+</style>
+
+<script type="text/javascript">
+/***********************************************
+* Random Order Content (from DIVs) script- by JavaScript Kit (www.javascriptkit.com)
+* This notice must stay intact for usage
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+***********************************************/
+
+if (document.getElementById)
+document.documentElement.className = 'jsclass'; //hide content for DOM capable browsers
+
+
+var randomordercontentdisplay={
+   divholders:new Object(),
+   masterclass: "randomordercontent",
+
+   init:function(){
+      if (!document.getElementById)
+         return
+      var alldivs=document.getElementsByTagName("div")
+      var randomcontentsearch=new RegExp(this.masterclass+"\\s+(group\\d+)", "i") //check for CSS class="randomcontent groupX" (x=integer)
+      for (var i=0; i<alldivs.length; i++){
+         if (randomcontentsearch.test(alldivs[i].className)){
+            if (typeof this.divholders[RegExp.$1]=="undefined"){ //if object to hold this group of divs doesn't exist yet
+               this.divholders[RegExp.$1]=new Object() //create object
+               this.divholders[RegExp.$1].ref=[] //create array to hold each div within group
+               this.divholders[RegExp.$1].contents=[] //create array to hold each div's content within group
+            }
+               this.divholders[RegExp.$1].ref.push(alldivs[i]) //add this div to the array
+               this.divholders[RegExp.$1].contents.push(alldivs[i].innerHTML) //add this div's content to the array
+         }
+      }
+   this.scrambleorder()
+   },
+
+   scrambleorder:function(){
+      for (group in this.divholders){ //loop thru each array within object
+         this.divholders[group].contents.sort(function() {return 0.5 - Math.random()}) //scramble contents array
+         for (var i=0; i<this.divholders[group].ref.length; i++){
+            this.divholders[group].ref[i].innerHTML=this.divholders[group].contents[i]
+            this.divholders[group].ref[i].style.display="block"
+         }
+      }
+   }
+}
+</script>
+
+<center>
+<marquee behavior='scroll' align='center' valign='bottom' direction='up' width='120' height='170' scrollamount='1' scrolldelay='1' onmouseover='this.stop()' onmouseout='this.start()'>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://poketeam.dk' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://poketeam.dk/banner/poketeam_banner1.png' border='0' title='PokeTeam' alt='PokeTeam'></a></p>
+</div>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://pokeballen.forumotion.com' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://i39.tinypic.com/5ororl.png' border='0' title='Pokeballen' alt='Pokeballen'></a></p>
+</div>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://digimons-world.de' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://digimons-world.de/images/is/link/link4.jpg' border='0' title='Digimons World' alt='Digimons World'></a></p>
+</div>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://manga-f.dk' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://www.manga-f.dk/PartnerLinkBilleder/1.png' border='0' title='Manga F' alt='Manga F'></a></p>
+</div>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://pokemon-legend.byethost3.com/news.php' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://i50.tinypic.com/51u1dt.png' border='0' title='Pokemon Legend' alt='Pokemon Legend'></a></p>
+</div>
+
+<div class="randomordercontent group1">
+<p align='center'><a href='http://www.pokemonen.forumotion.com' target='_blank'> <img style="filter:alpha(opacity=20);-moz-opacity:0.2" onMouseover="makevisible(this,0)" onMouseout="makevisible(this,1)" src='http://i41.tinypic.com/4v0bcg.png' border='0' title='Pokemonen' alt='Pokemonen'></a></p>
+</div>
+
+</marquee>
+</center>
+
+<script type="text/javascript">
+randomordercontentdisplay.init()
+</script>
+   
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+    <style>
+    #wrapper{
+        position: absolute;
+		z-index:5000;
+        bottom: 0px;
+        width: 95%;
+    }
+
+    #myimage{
+        display: block;
+        position: relative;
+        margin: auto;
+        width: (any width you want)
+   }
+   .style1 {color: #666666}
+    </style>
+
+
+</head>
+
+<body bgcolor=#666666>
+
+   </script>
+  
+<script language="javascript">
+  var keyspushed = 0;
+  var random_images_array = ["Alec.gif", "Anna.gif", "Benji.gif", "Carter.gif", "Charlotte.gif", "Elliot.gif", "Gordon.gif", "Hayden.gif", "Henry.gif", "HenryP.gif", "Isaiah.gif", "Jackson.gif", "Jenica.gif", "Kai.gif","Jaiden.gif", "Tess.gif"]; 
+  
+   document.onkeydown = function(evt) 
+   {
+    	evt = evt || window.event;
+			switch(keyspushed)
+			{
+				case 0:
+					if (evt.keyCode == 38) keyspushed = 1;
+					else keyspushed = 0;
+					
+					break;
+				case 1:
+					if (evt.keyCode == 37) keyspushed = 2;
+					else keyspushed = 0;
+					break;
+				case 2:
+					if (evt.keyCode == 38) keyspushed = 3;
+					else keyspushed = 0;
+					break;
+				case 3:
+					if (evt.keyCode == 37) keyspushed = 4;
+					else keyspushed = 0;
+					break;
+				case 4:
+					total_images= 3;
+					randInt = parseInt((Math.random() * (3 + 1)), 10);
+					
+				num = Math.floor( Math.random() * random_images_array.length );
+    			image = random_images_array[ num ];
+//				alert(image);
+											
+					
+					if (evt.keyCode == 75)
+					{			
+						document.getElementById("myDiv").innerHTML="<marquee behavior=\"scroll\" direction=\"left\"><img src=\"images/" + image + "\" alt=\"Swimming fish\"></marquee>";	
+					} else keyspushed = 0;
+						
+					break;
+			}
+			
+	}
+	
+   </script>
+   
+   
+   <div id="wrapper">
+
+   <b id="myDiv"><marquee behavior="scroll" direction="left">
+<img src="images/empty.gif" alt="Nothing here">
+</marquee></b>
+   </div>
+   
+   Testing
+   
+   Press Any Key:<br>
+
+<script>
+
+
+   
+   
+</body>
+</html>
